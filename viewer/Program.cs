@@ -27,6 +27,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseCookiePolicy();
+app.UseCors();
 
 app.UseEndpoints(endpoints =>
 {
