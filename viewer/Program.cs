@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using viewer.Hubs;
 using Microsoft.Extensions.DependencyInjection;
+using viewer.Hubs;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy.WithOrigins("http://localhost:3000");
-            policy.WithOrigins("https://orange-bay-08a578f0f.4.azurestaticapps.net")
+            policy.WithOrigins("https://orange-bay-08a578f0f.4.azurestaticapps.net");
             policy.AllowAnyMethod();
             policy.AllowCredentials();
         });
