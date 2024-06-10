@@ -11,7 +11,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            policy.AllowAnyOrigin();
+            policy.WithOrigins("http://localhost");
+            policy.WithOrigins("https://orange-bay-08a578f0f.4.azurestaticapps.net");
             policy.AllowAnyMethod();
             policy.AllowAnyHeader();
             policy.AllowCredentials();
